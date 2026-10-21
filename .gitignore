@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local database/customer booking data
+*.sqlite
+*.sqlite3
+*.db
+
+# Build outputs / dependencies
+node_modules/
+dist/
+build/
+coverage/
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: aurelia-hair-atelier
+    runtime: python
+    plan: starter
+    buildCommand: ""
+    startCommand: python server.py
+    healthCheckPath: /api/services
+    envVars:
+      - key: ADMIN_KEY
+        generateValue: true
+      - key: DB_PATH
+        value: /var/data/aurelia.sqlite3
+    disk:
+      name: aurelia-data
+      mountPath: /var/data
+      sizeGB: 1
