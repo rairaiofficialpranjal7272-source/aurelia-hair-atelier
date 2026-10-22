@@ -50,6 +50,8 @@ The app creates `aurelia.sqlite3` locally on first launch. Booking records are d
 
 ## Hosting and GitHub Pages
 
+The website is plain HTML/CSS/JavaScript; there is no Vite, React, or other frontend production build. Image references use explicit relative paths (`./assets/...`), so the browser resolves them under the GitHub Pages project-site path `/aurelia-hair-atelier/` without a bundler/base-path setting. Run `python3 scripts/verify_assets.py` to check local image references and the repository subpath mapping.
+
 GitHub Pages can serve the static HTML and images, but **cannot run `server.py`, SQLite, the service admin panel, or save bookings**. Deploy the complete functioning site to a Python-capable host with persistent storage, or separately build/host an API and update the frontend API URLs/CORS configuration. The included `render.yaml` is an example Render service configured with a persistent disk and generated `ADMIN_KEY`; confirm current platform pricing and settings before deploying.
 
 ## Deploy using Render (recommended simple full-stack path)
